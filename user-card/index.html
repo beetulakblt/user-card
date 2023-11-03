@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USERS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="page-header">
+        <div class="page-header-title">
+          <h2>Kullanıcı Listesi</h2>
+        </div>
+        <div class="page-header-text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            fugiat adipisci repellat non numquam odio sunt quis id esse!
+            Repellat delectus aperiam recusandae odit error minima quod dolore
+            sapiente nam. Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Neque sunt illum commodi quaerat ipsum id ratione totam
+            dignissimos minima illo recusandae doloribus unde ut vero, nulla,
+            aperiam, quam veritatis harum?
+          </p>
+        </div>
+        <div class="page-header-add">
+          <div class="page-header-search">
+            <i class="ri-search-line"></i>
+            <input
+              type="text"
+              data-search
+              id="searchInput"
+              placeholder="Search"
+            />
+          </div>
+          <button
+            id="showUserModal"
+            class="page-header-add-button d-flex align-items-center justify-content-center"
+          >
+            <i class="ri-add-line"></i>Yeni Kullanıcı Ekle
+          </button>
+        </div>
+      </div>
+      <main>
+        <div class="row mx-3 my-4" id="userCardGroup"></div>
+      </main>
+    </div>
+
+    <div class="modal" id="userCrudModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputName" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputName"
+                  placeholder="Betül"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputUsername" class="form-label">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputUsername"
+                  placeholder="Akbulut"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail" class="form-label">Email Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputEmail"
+                  placeholder="xxxxx@gmail.com"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputPhone" class="form-label">Phone Number</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputNumber"
+                    placeholder="555 555 55 55"
+                    aria-label="Username"
+                    aria-describedby="basic-addon1"
+                  />
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="inputWebsite" class="form-label">Web Site</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputWebsite"
+                  placeholder="xxxx.com"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputCompany" class="form-label">Company</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputCompany"
+                  placeholder="TGS A.Ş"
+                />
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="1234 Main St"
+                />
+              </div>
+              <div class="col-md-4">
+                <label for="inputCity" class="form-label">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputCity"
+                  placeholder="Teksas"
+                />
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>Apt. 222</option>
+                  <option>Apt. 333</option>
+                  <option>Apt. 444</option>
+                  <option>Apt. 555</option>
+                  <option>Apt. 666</option>
+                  <option>Apt. 777</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" id="userCrudBtn">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="userImageModal" class="modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content gap-2">
+          <div class="modal-header">
+            <h5 class="modal-title">Yeni Fotoğraf Yükle</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            id="dropArea"
+            class="modal-body d-flex flex-column align-items-center gap-4"
+          >
+            <div
+              class="userImage d-flex justify-content-center align-items-center"
+            >
+              <img id="uploadedImage" src="./image/imageicon.png" alt="" />
+            </div>
+            <p>Sürükleyip bırakın veya buraya tıklayın</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-success" id="imageCrudBtn">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js//lib/jquery.min.js"></script>
+    <script src="js//lib/bootstrap.bundle.min.js"></script>
+    <script src="js/user/create_user_list.js"></script>
+    <script src="js/user/crud_user.js"></script>
+    <script src="js/user/crud_image.js"></script>
+    <script src="js/user/index.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

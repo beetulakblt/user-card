@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p,
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    margin: 1rem 2rem;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    margin: 0px 6rem;
+    border-bottom: 1px solid rgb(224, 222, 222);
+}
+
+.page-header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-header-text {
+    text-align: center;
+    font-size: 14px;
+    margin: 0px 12rem 10px 12rem;
+}
+
+.page-header-add {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 10px 6rem;
+}
+
+.page-header-search {
+    position: relative;
+}
+
+.page-header-search i {
+    position: absolute;
+    top: 14px;
+    left: 10px;
+}
+
+.page-header-search input {
+    height: 50px;
+    width: 500px;
+    outline: none;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 7px;
+    padding-left: 30px;
+    background-color: #f4f4f49c;
+
+}
+
+.page-header-add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 50px;
+    width: max-content;
+    padding: 2px 10px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid rgb(175, 175, 175);
+    background-color: #2BC45F;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.user-card {
+    display: flex;
+    width: 100%;
+    background-color: #f4f4f4;
+    position: relative;
+    border-radius: 20px;
+    height: 242px;
+}
+
+.user-card-left img {
+    height: -webkit-fill-available;
+    border-radius: 20px;
+}
+
+.user-image img {
+    left: 2rem;
+    height: 80px;
+    position: absolute;
+    top: 4rem;
+    border-radius: 50%;
+}
+
+.user-card-right {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 0px 0px 10px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 20px;
+    background-color: #f4f4f4;
+}
+
+.button-group {
+    display: flex;
+    gap: 5px;
+    justify-content: end;
+    font-size: 16px;
+    padding-right: 5px;
+}
+
+.button-group button {
+    border-radius: 10px;
+    width: 40px;
+    padding: 2px;
+    outline: none;
+    border: 1px solid rgb(194, 193, 193);
+    background-color: #ffffff;
+
+}
+
+.button-group button i {
+    color: #000 !important;
+    font-weight: 400;
+}
+
+.user-info {
+    padding-bottom: 5px;
+}
+
+.user-name,
+.user-mail {
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.user-card-right div i {
+    color: gray;
+}
+
+.user-address,
+.user-phone,
+.user-website,
+.user-company {
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    border-color: rgb(175, 175, 175);
+    outline: none;
+    box-shadow: none;
+}
+
+.modal {
+    --bs-modal-padding: 3rem;
+}
+
+.modal-header {
+    border: none;
+    padding-top: 2rem;
+}
+
+.modal-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #7C7F98;
+    font-size: 25px;
+}
+
+.modal-footer {
+    border: none;
+}
+
+.userImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px dashed #9c9aa694;
+}
+
+.modal-body p {
+    color: #6c6f86;
+    font-size: 18px;
+}
+
+#uploadedImage {
+    border-radius: 50%;
+}
